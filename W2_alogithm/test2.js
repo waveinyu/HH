@@ -4,7 +4,7 @@ console.log(parseInt(str)); //NaN
 
 let str2 = "1234";
 console.log(isNaN(str2)); //false
-console.log(parseInt(str2)); //NaN
+console.log(parseInt(str2)); //1234
 
 function solution(s) {
   let answer = parseInt(s);

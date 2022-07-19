@@ -7,19 +7,20 @@
 // "a234"	false
 // "1234"	true
 
+let str = "a123";
+console.log(isNaN(str)); //true
+console.log(parseInt(str)); //NaN
+
+let str2 = "1234";
+console.log(isNaN(str2)); //false
+console.log(parseInt(str2)); //1234
+
 function solution(s) {
-  let answer = true;
-  if (s.length === 4 || s.length === 6) {
-    if (isNaN(s)) {
-      //넘버가 아니면 false
-      answer = false;
-    } else {
-      answer = true;
-    }
+  let answer = parseInt(s);
+  if ((s.length === 4 || s.length === 6) && s == answer) {
+    answer = true;
   } else {
     answer = false;
   }
   return answer;
 }
-
-console.log(solution("1234"));
